@@ -23,7 +23,7 @@ impl Array {
         let length = self.0.len();
         let mut vector = Vec::<u8>::with_capacity(length);
         unsafe {
-            vector.set_len(length - 3);
+            vector.set_len(length);
         }
         self.bytes().copy_to_slice(vector.as_mut_slice());
         vector
